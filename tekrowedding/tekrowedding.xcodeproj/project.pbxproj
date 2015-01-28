@@ -15,6 +15,8 @@
 		3C5EB9861A78EF4A003CF266 /* tekroweddingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5EB9851A78EF4A003CF266 /* tekroweddingTests.m */; };
 		3C5EB9A41A790538003CF266 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5EB9731A78EF48003CF266 /* Main.storyboard */; };
 		3C5EB9A51A790538003CF266 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C5EB9781A78EF49003CF266 /* LaunchScreen.xib */; };
+		3C5EB9AA1A79245D003CF266 /* InfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5EB9A91A79245D003CF266 /* InfoVC.m */; };
+		3CD9FC921A7940A90061CAE9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD9FC8F1A7940930061CAE9 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		3C5EB97F1A78EF4A003CF266 /* tekroweddingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tekroweddingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5EB9841A78EF4A003CF266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C5EB9851A78EF4A003CF266 /* tekroweddingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tekroweddingTests.m; sourceTree = "<group>"; };
+		3C5EB9A81A79245D003CF266 /* InfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoVC.h; path = ui/viewcontrollers/InfoVC.h; sourceTree = "<group>"; };
+		3C5EB9A91A79245D003CF266 /* InfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoVC.m; path = ui/viewcontrollers/InfoVC.m; sourceTree = "<group>"; };
+		3CD9FC8F1A7940930061CAE9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CD9FC921A7940A90061CAE9 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,7 @@
 		3C5EB95A1A78EF45003CF266 = {
 			isa = PBXGroup;
 			children = (
+				3CD9FC911A7940990061CAE9 /* lib */,
 				3C5EB9651A78EF46003CF266 /* tekrowedding */,
 				3C5EB9821A78EF4A003CF266 /* tekroweddingTests */,
 				3C5EB9641A78EF46003CF266 /* Products */,
@@ -84,6 +91,7 @@
 		3C5EB9651A78EF46003CF266 /* tekrowedding */ = {
 			isa = PBXGroup;
 			children = (
+				3C5EB9A61A79241E003CF266 /* ui */,
 				3C5EB96A1A78EF47003CF266 /* AppDelegate.h */,
 				3C5EB96B1A78EF47003CF266 /* AppDelegate.m */,
 				3C5EB96D1A78EF47003CF266 /* FirstViewController.h */,
@@ -122,6 +130,31 @@
 				3C5EB9841A78EF4A003CF266 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3C5EB9A61A79241E003CF266 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				3C5EB9A71A79242C003CF266 /* viewcontrollers */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		3C5EB9A71A79242C003CF266 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				3C5EB9A81A79245D003CF266 /* InfoVC.h */,
+				3C5EB9A91A79245D003CF266 /* InfoVC.m */,
+			);
+			name = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		3CD9FC911A7940990061CAE9 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				3CD9FC8F1A7940930061CAE9 /* MapKit.framework */,
+			);
+			name = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +260,7 @@
 				3C5EB9721A78EF48003CF266 /* SecondViewController.m in Sources */,
 				3C5EB96C1A78EF47003CF266 /* AppDelegate.m in Sources */,
 				3C5EB96F1A78EF48003CF266 /* FirstViewController.m in Sources */,
+				3C5EB9AA1A79245D003CF266 /* InfoVC.m in Sources */,
 				3C5EB9691A78EF47003CF266 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +452,7 @@
 				3C5EB98B1A78EF4B003CF266 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C5EB98C1A78EF4B003CF266 /* Build configuration list for PBXNativeTarget "tekroweddingTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +461,7 @@
 				3C5EB98E1A78EF4B003CF266 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
