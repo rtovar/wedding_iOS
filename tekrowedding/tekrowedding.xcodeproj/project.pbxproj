@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3C5EB9691A78EF47003CF266 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5EB9681A78EF47003CF266 /* main.m */; };
 		3C5EB96C1A78EF47003CF266 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5EB96B1A78EF47003CF266 /* AppDelegate.m */; };
-		3C5EB96F1A78EF48003CF266 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5EB96E1A78EF48003CF266 /* FirstViewController.m */; };
 		3C5EB9721A78EF48003CF266 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5EB9711A78EF48003CF266 /* SecondViewController.m */; };
 		3C5EB9771A78EF49003CF266 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5EB9761A78EF49003CF266 /* Images.xcassets */; };
 		3C5EB9861A78EF4A003CF266 /* tekroweddingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5EB9851A78EF4A003CF266 /* tekroweddingTests.m */; };
@@ -17,6 +16,9 @@
 		3C5EB9A51A790538003CF266 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C5EB9781A78EF49003CF266 /* LaunchScreen.xib */; };
 		3C5EB9AA1A79245D003CF266 /* InfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5EB9A91A79245D003CF266 /* InfoVC.m */; };
 		3CD9FC921A7940A90061CAE9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD9FC8F1A7940930061CAE9 /* MapKit.framework */; };
+		E7E02C7E1A7967CD003C0B41 /* InvitationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E02C7D1A7967CD003C0B41 /* InvitationVC.m */; };
+		E7E02C831A7969D3003C0B41 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E02C821A7969D3003C0B41 /* ColorHelper.m */; };
+		E7E02C891A79752C003C0B41 /* InvitationZoomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E02C881A79752C003C0B41 /* InvitationZoomVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +37,6 @@
 		3C5EB9681A78EF47003CF266 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C5EB96A1A78EF47003CF266 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C5EB96B1A78EF47003CF266 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3C5EB96D1A78EF47003CF266 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		3C5EB96E1A78EF48003CF266 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		3C5EB9701A78EF48003CF266 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		3C5EB9711A78EF48003CF266 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		3C5EB9741A78EF48003CF266 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +48,12 @@
 		3C5EB9A81A79245D003CF266 /* InfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoVC.h; path = ui/viewcontrollers/InfoVC.h; sourceTree = "<group>"; };
 		3C5EB9A91A79245D003CF266 /* InfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoVC.m; path = ui/viewcontrollers/InfoVC.m; sourceTree = "<group>"; };
 		3CD9FC8F1A7940930061CAE9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E7E02C7C1A7967CD003C0B41 /* InvitationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InvitationVC.h; path = ui/viewcontrollers/InvitationVC.h; sourceTree = "<group>"; };
+		E7E02C7D1A7967CD003C0B41 /* InvitationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InvitationVC.m; path = ui/viewcontrollers/InvitationVC.m; sourceTree = "<group>"; };
+		E7E02C811A7969D3003C0B41 /* ColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorHelper.h; path = helpers/ColorHelper.h; sourceTree = "<group>"; };
+		E7E02C821A7969D3003C0B41 /* ColorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorHelper.m; path = helpers/ColorHelper.m; sourceTree = "<group>"; };
+		E7E02C871A79752C003C0B41 /* InvitationZoomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InvitationZoomVC.h; path = ui/viewcontrollers/InvitationZoomVC.h; sourceTree = "<group>"; };
+		E7E02C881A79752C003C0B41 /* InvitationZoomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InvitationZoomVC.m; path = ui/viewcontrollers/InvitationZoomVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +97,10 @@
 		3C5EB9651A78EF46003CF266 /* tekrowedding */ = {
 			isa = PBXGroup;
 			children = (
+				E7E02C7F1A796915003C0B41 /* helpers */,
 				3C5EB9A61A79241E003CF266 /* ui */,
 				3C5EB96A1A78EF47003CF266 /* AppDelegate.h */,
 				3C5EB96B1A78EF47003CF266 /* AppDelegate.m */,
-				3C5EB96D1A78EF47003CF266 /* FirstViewController.h */,
-				3C5EB96E1A78EF48003CF266 /* FirstViewController.m */,
 				3C5EB9701A78EF48003CF266 /* SecondViewController.h */,
 				3C5EB9711A78EF48003CF266 /* SecondViewController.m */,
 				3C5EB9731A78EF48003CF266 /* Main.storyboard */,
@@ -145,6 +150,10 @@
 			children = (
 				3C5EB9A81A79245D003CF266 /* InfoVC.h */,
 				3C5EB9A91A79245D003CF266 /* InfoVC.m */,
+				E7E02C7C1A7967CD003C0B41 /* InvitationVC.h */,
+				E7E02C7D1A7967CD003C0B41 /* InvitationVC.m */,
+				E7E02C871A79752C003C0B41 /* InvitationZoomVC.h */,
+				E7E02C881A79752C003C0B41 /* InvitationZoomVC.m */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -155,6 +164,15 @@
 				3CD9FC8F1A7940930061CAE9 /* MapKit.framework */,
 			);
 			name = lib;
+			sourceTree = "<group>";
+		};
+		E7E02C7F1A796915003C0B41 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E7E02C811A7969D3003C0B41 /* ColorHelper.h */,
+				E7E02C821A7969D3003C0B41 /* ColorHelper.m */,
+			);
+			name = helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,9 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E02C891A79752C003C0B41 /* InvitationZoomVC.m in Sources */,
 				3C5EB9721A78EF48003CF266 /* SecondViewController.m in Sources */,
+				E7E02C831A7969D3003C0B41 /* ColorHelper.m in Sources */,
 				3C5EB96C1A78EF47003CF266 /* AppDelegate.m in Sources */,
-				3C5EB96F1A78EF48003CF266 /* FirstViewController.m in Sources */,
+				E7E02C7E1A7967CD003C0B41 /* InvitationVC.m in Sources */,
 				3C5EB9AA1A79245D003CF266 /* InfoVC.m in Sources */,
 				3C5EB9691A78EF47003CF266 /* main.m in Sources */,
 			);
