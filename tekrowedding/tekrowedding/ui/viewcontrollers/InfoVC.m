@@ -37,7 +37,7 @@
 
              // Set map region
              MKCoordinateRegion region = _mapView.region;
-             region.center = aPlacemark.region.center;
+             region.center = aPlacemark.location.coordinate;
              region.span.longitudeDelta = 1;
              region.span.latitudeDelta = 1;
 
@@ -49,6 +49,17 @@
              [_mapView selectAnnotation:point animated:YES];
          }
      }];
+}
+
+- (IBAction)mapButtonWasTapped:(id)sender
+{
+    NSArray *annotations = [_mapView annotations];
+
+    if (annotations && annotations.count == 1) {
+        MKPlacemark *mkDest = [[MKPlacemark alloc] initWithCoordinate:((id<MKAnnotation>)annotations[0]).coordinate
+                                                    addressDictionary:nil];
+        [[[MKMapItem alloc] initWithPlacemark:mkDest] openInMapsWithLaunchOptions:nil];
+    }
 }
 
 @end
