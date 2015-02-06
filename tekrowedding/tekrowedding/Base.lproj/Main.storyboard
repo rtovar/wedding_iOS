@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LZV-sB-oK1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEN-RK-VSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1219" y="-320"/>
+            <point key="canvasLocation" x="1119" y="-320"/>
         </scene>
         <!--Invitados-->
         <scene sceneID="wg7-f3-ORb">
@@ -93,32 +93,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aVo-9h-vYz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aVo-9h-vYz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.36078432199999999" green="0.3058823645" blue="0.45098042490000001" alpha="1" colorSpace="deviceRGB"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Lsa-je-SGG">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GuestCell" id="Lsa-je-SGG" customClass="GuestCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lsa-je-SGG" id="jVM-IB-F64">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noemí" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGh-ta-eaw">
-                                                    <rect key="frame" x="8" y="31" width="213" height="58"/>
+                                                    <rect key="frame" x="8" y="8" width="213" height="58"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="58"/>
                                                     <color key="textColor" red="0.36078432199999999" green="0.3058823645" blue="0.45098042490000001" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKn-zf-OVG">
+                                                    <rect key="frame" x="251" y="8" width="61" height="61"/>
+                                                    <state key="normal" image="ic_rsvp"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOv-5H-DqY">
+                                                    <rect key="frame" x="8" y="90" width="226" height="30"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                    <state key="normal" title="Selecciona tu menú">
+                                                        <color key="titleColor" red="0.69411766529999996" green="0.35294118520000001" blue="0.34509804840000002" alpha="0.5" colorSpace="deviceRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="H4s-R4-py6" kind="show" identifier="showMenuVC" id="jJN-Yl-pOm"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Díaz Asensio" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goD-Mi-7b1">
-                                                    <rect key="frame" x="8" y="87" width="213" height="21"/>
+                                                    <rect key="frame" x="8" y="67" width="213" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                     <color key="textColor" red="0.69411766529999996" green="0.35294118520000001" blue="0.34509804840000002" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.97647064920000004" green="0.93333339689999995" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <outlet property="firstNameLabel" destination="eGh-ta-eaw" id="vDU-SL-sge"/>
+                                            <outlet property="lastNameLabel" destination="goD-Mi-7b1" id="fnU-GT-vQK"/>
+                                            <outlet property="menuButton" destination="bOv-5H-DqY" id="uiS-Xs-df7"/>
+                                            <outlet property="rsvpButton" destination="PKn-zf-OVG" id="Oyy-kd-QFh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="NPn-QG-fBE"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.97647064920000004" green="0.93333339689999995" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
@@ -130,10 +157,182 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Invitados" image="icon_guests" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableView" destination="aVo-9h-vYz" id="Qra-qB-ed2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="202"/>
+            <point key="canvasLocation" x="750" y="207"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hz9-L6-mgt">
+            <objects>
+                <viewController id="H4s-R4-py6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y5Y-cn-Nke"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jeu-65-s6T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sWT-aB-y8c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A4c-Go-vtZ">
+                                <rect key="frame" x="16" y="20" width="288" height="30"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Plato de Carne">
+                                            <attributes>
+                                                <color key="NSColor" red="0.36078432199999999" green="0.3058823645" blue="0.45098042490000001" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue-Thin"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="selected">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Plato de Carne">
+                                            <attributes>
+                                                <color key="NSColor" red="0.69411766529999996" green="0.35294118520000001" blue="0.34509804840000002" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wVq-4e-JPm">
+                                <rect key="frame" x="16" y="66" width="288" height="30"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Plato de Pescado">
+                                            <attributes>
+                                                <color key="NSColor" red="0.36078432199999999" green="0.3058823645" blue="0.45098042490000001" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue-Thin"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="selected">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Plato de Pescado">
+                                            <attributes>
+                                                <color key="NSColor" red="0.69411766529999996" green="0.35294118520000001" blue="0.34509804840000002" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Otras preferencias..." clearsOnBeginEditing="YES" minimumFontSize="10" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bem-cE-crO">
+                                <rect key="frame" x="16" y="204" width="288" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Mu3-CI-2Iz"/>
+                                </constraints>
+                                <color key="textColor" red="0.36078432199999999" green="0.3058823645" blue="0.45098042490000001" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vsX-IK-g0f">
+                                <rect key="frame" x="16" y="112" width="288" height="30"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Plato Vegano">
+                                            <attributes>
+                                                <color key="NSColor" red="0.36078432199999999" green="0.3058823645" blue="0.45098042490000001" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue-Thin"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="selected">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Plato Vegano">
+                                            <attributes>
+                                                <color key="NSColor" red="0.69411766529999996" green="0.35294118520000001" blue="0.34509804840000002" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kg0-fZ-WcP">
+                                <rect key="frame" x="16" y="158" width="288" height="30"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Otros (indícanos si tienes alguna preferencia diferente o alguna alergia a tener en cuenta)">
+                                            <attributes>
+                                                <color key="NSColor" red="0.36078432199999999" green="0.3058823645" blue="0.45098042490000001" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue-Thin"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="selected">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Otros (indícanos si tienes alguna preferencia diferente o alguna alergia a tener en cuenta)">
+                                            <attributes>
+                                                <color key="NSColor" red="0.69411766529999996" green="0.35294118520000001" blue="0.34509804840000002" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647064920000004" green="0.93333339689999995" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="A4c-Go-vtZ" firstAttribute="leading" secondItem="sWT-aB-y8c" secondAttribute="leadingMargin" id="A7X-IV-vXA"/>
+                            <constraint firstItem="vsX-IK-g0f" firstAttribute="leading" secondItem="sWT-aB-y8c" secondAttribute="leadingMargin" id="B7o-nX-y20"/>
+                            <constraint firstItem="vsX-IK-g0f" firstAttribute="top" secondItem="wVq-4e-JPm" secondAttribute="bottom" constant="16" id="H5n-jQ-gI9"/>
+                            <constraint firstItem="Kg0-fZ-WcP" firstAttribute="trailing" secondItem="sWT-aB-y8c" secondAttribute="trailingMargin" id="POe-Gs-qUR"/>
+                            <constraint firstItem="wVq-4e-JPm" firstAttribute="trailing" secondItem="sWT-aB-y8c" secondAttribute="trailingMargin" id="Puh-Ac-CEx"/>
+                            <constraint firstItem="bem-cE-crO" firstAttribute="leading" secondItem="sWT-aB-y8c" secondAttribute="leadingMargin" id="W4G-jT-xX8"/>
+                            <constraint firstItem="A4c-Go-vtZ" firstAttribute="top" secondItem="Y5Y-cn-Nke" secondAttribute="bottom" id="W8z-vM-41O"/>
+                            <constraint firstItem="A4c-Go-vtZ" firstAttribute="trailing" secondItem="sWT-aB-y8c" secondAttribute="trailingMargin" id="ecH-yM-TFw"/>
+                            <constraint firstItem="bem-cE-crO" firstAttribute="top" secondItem="Kg0-fZ-WcP" secondAttribute="bottom" constant="16" id="fNv-S3-fZ0"/>
+                            <constraint firstItem="Kg0-fZ-WcP" firstAttribute="leading" secondItem="sWT-aB-y8c" secondAttribute="leadingMargin" id="hX3-Qm-JEj"/>
+                            <constraint firstItem="vsX-IK-g0f" firstAttribute="trailing" secondItem="sWT-aB-y8c" secondAttribute="trailingMargin" id="hsb-N2-V3H"/>
+                            <constraint firstItem="vsX-IK-g0f" firstAttribute="top" secondItem="wVq-4e-JPm" secondAttribute="bottom" constant="16" id="mAt-jo-1mf"/>
+                            <constraint firstItem="Kg0-fZ-WcP" firstAttribute="top" secondItem="vsX-IK-g0f" secondAttribute="bottom" constant="16" id="pSP-CI-dGE"/>
+                            <constraint firstItem="bem-cE-crO" firstAttribute="trailing" secondItem="sWT-aB-y8c" secondAttribute="trailingMargin" id="tga-k1-2gx"/>
+                            <constraint firstItem="wVq-4e-JPm" firstAttribute="leading" secondItem="sWT-aB-y8c" secondAttribute="leadingMargin" id="ufP-hD-6Q0"/>
+                            <constraint firstItem="wVq-4e-JPm" firstAttribute="top" secondItem="A4c-Go-vtZ" secondAttribute="bottom" constant="16" id="wIM-pA-Uek"/>
+                            <constraint firstItem="wVq-4e-JPm" firstAttribute="top" secondItem="A4c-Go-vtZ" secondAttribute="bottom" constant="16" id="wX5-A4-4NB"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfg-TJ-ZzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1119" y="207"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VgS-LE-qcL">
+            <objects>
+                <viewController id="LZV-sB-oK1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z0E-UV-rZO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bdl-lu-bAM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aG1-Xt-Of6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="showInvitation" id="ewI-GU-FvY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bin-lm-wmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-489" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -337,6 +536,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_rsvp" width="61" height="61"/>
         <image name="icon_calendar" width="45" height="45"/>
         <image name="icon_clock" width="45" height="45"/>
         <image name="icon_guests" width="31" height="31"/>

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Guest.h"
 
 @interface GuestCell : UITableViewCell
+
+- (void)setGuest:(Guest *)guest;
 
 @end
