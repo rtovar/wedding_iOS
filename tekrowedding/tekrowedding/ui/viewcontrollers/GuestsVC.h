@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GuestsVC : UIViewController <UITableViewDataSource>
+@interface GuestsVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

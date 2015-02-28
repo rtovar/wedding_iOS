@@ -7,11 +7,11 @@
 //
 
 #import "NetworkHelper.h"
-#import "ContentProvider.h"
+#import <AFNetworking/AFHTTPRequestOperationManager.h>
 
 @implementation NetworkHelper
 
-+ (void)getInvitationWithID:(NSString *)invitationID succeessBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock
++ (void)getInvitationWithID:(NSString *)invitationID successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@invite/%@", kBaseURLString, invitationID]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -20,6 +20,24 @@
     [operation setResponseSerializer:[AFJSONResponseSerializer serializer]];
     [operation setCompletionBlockWithSuccess:successBlock failure:failureBlock];
     [operation start];
+}
+
++ (void)updateGuest:(Guest *)guest fromInvitationWithID:(NSString *)invitationID withSucessBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock
+{
+    NSString *urlString = [NSString stringWithFormat:@"%@invite/%@/%@", kBaseURLString, invitationID, guest.identifier];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager setRequestSerializer:[AFJSONRequestSerializer serializer]];
+    [manager POST:urlString parameters:[guest dictionaryRepresentation] success:successBlock failure:failureBlock];
+}
+
++ (void)askForPaperInvitation:(Invitation *)invitation withSuccessBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock
+{
+    NSString *urlString = [NSString stringWithFormat:@"%@invite/%@", kBaseURLString, invitation.identifier];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager setRequestSerializer:[AFJSONRequestSerializer serializer]];
+    [manager POST:urlString parameters:[invitation dictionaryRepresentation] success:successBlock failure:failureBlock];
 }
 
 @end

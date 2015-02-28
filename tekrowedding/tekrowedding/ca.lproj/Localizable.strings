@@ -1,0 +1,13 @@
+/* 
+  File.strings
+  tekrowedding
+
+  Created by Rocío Tovar on 20/2/15.
+  Copyright (c) 2015 Rocio Tovar. All rights reserved.
+*/
+"menu_meat" = "Plato de Carne";
+"menu_fish" = "Plato de Pescado";
+"menu_veggie" = "Plato Vegano";
+"menu_child" = "Menú Infantil";
+"menu_other" = "Otros (indícanos si tienes alguna preferencia diferente o alguna alergia a tener en cuenta)";
+"menu_other_placeholder" = "Otras preferencias";

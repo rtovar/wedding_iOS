@@ -10,9 +10,14 @@
 
 @interface Guest : NSObject
 
+@property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, strong) NSString *lastName;
 @property (nonatomic, assign) BOOL rsvp;
 @property (nonatomic, strong) NSString *menu;
+@property (nonatomic, strong) NSString *menuOther;
+
+- (NSDictionary *)dictionaryRepresentation;
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
 
 @end

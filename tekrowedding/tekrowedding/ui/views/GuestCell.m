@@ -9,6 +9,8 @@
 #import "GuestCell.h"
 #import "InterfaceHelper.h"
 #import "ColorHelper.h"
+#import "ContentProvider.h"
+#import "NetworkHelper.h"
 
 @interface GuestCell ()
 {
@@ -30,12 +32,29 @@
 
     [_firstNameLabel setText:_guest.firstName];
     [_lastNameLabel setText:_guest.lastName];
-    [_rsvpButton setEnabled:_guest.rsvp];
     [_menuButton setHidden:!_guest.rsvp];
-    [_menuButton setTitle:NSLocalizedString(_guest.menu, nil) forState:UIControlStateNormal];
-
-    [_rsvpButton setImage:[InterfaceHelper getImageWithName:@"ic_rsvp" andTintColor:[THEME_PINK colorWithAlphaComponent:0.4]] forState:UIControlStateNormal];
+    
+    NSString *menuString;
+    if (_guest.menu && ![_guest.menu isEqualToString:@"other"]) {
+        NSString *menuKey = [NSString stringWithFormat:@"menu_%@", _guest.menu];
+        menuString = NSLocalizedString(menuKey, nil);
+    } else if (_guest.menu) {
+        menuString = _guest.menuOther;
+    } else {
+        menuString = NSLocalizedString(@"menu_unknown", nil);
+    }
+    
+    [_menuButton setTitle:menuString forState:UIControlStateNormal];
+    [_rsvpButton setImage:[InterfaceHelper getImageWithName:@"ic_rsvp" andTintColor:[ColorHelper color:THEME_PINK blendedWithColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:1] withAlpha:0.4]] forState:UIControlStateNormal];
     [_rsvpButton setImage:[InterfaceHelper getImageWithName:@"ic_rsvp" andTintColor:THEME_PINK] forState:UIControlStateSelected];
+    [_rsvpButton setSelected:_guest.rsvp];
+}
+
+- (IBAction)didTouchInsideUpRSVPButton:(UIButton *)sender
+{
+    [sender setSelected:!sender.isSelected];
+    [_guest setRsvp:sender.isSelected];
+    [[ContentProvider sharedInstance] updateGuest:_guest];
 }
 
 @end

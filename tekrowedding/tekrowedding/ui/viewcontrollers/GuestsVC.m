@@ -8,10 +8,15 @@
 
 #import "GuestsVC.h"
 #import "GuestCell.h"
+#import "ContentProvider.h"
+#import "InterfaceHelper.h"
+#import "ColorHelper.h"
+#import "MenuVC.h"
 
 @interface GuestsVC ()
 {
     NSArray *_guestsArray;
+    BOOL _didSetUpTabBar;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -19,6 +24,41 @@
 @end
 
 @implementation GuestsVC
+
+#pragma mark - Life Cycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    
+    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    _guestsArray = [[ContentProvider sharedInstance] getCurrentInvitation].guests;
+    [_tableView reloadData];
+    [self addNotificationObservers];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    if (!_didSetUpTabBar) {
+        [self.navigationController setTabBarItem:[self.tabBarItem initWithTitle:NSLocalizedString(@"tab_title_guests", nil)
+                                                     image:[[InterfaceHelper getImageWithName:@"icon_guests" andTintColor:THEME_PURPLE] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                             selectedImage:[[InterfaceHelper getImageWithName:@"icon_guests_selected" andTintColor:THEME_PURPLE] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]]];
+        _didSetUpTabBar = YES;
+    }
+    
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)dealloc
+{
+    [self removeNotificationObservers];
+}
+
+- (UIRectEdge)edgesForExtendedLayout
+{
+    return [super edgesForExtendedLayout] ^ UIRectEdgeBottom;
+}
 
 #pragma mark - UITableViewDataSource
 
@@ -46,6 +86,31 @@
 
     return cell;
 
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [[ContentProvider sharedInstance] setCurrentGuest:_guestsArray[indexPath.row]];
+    [self performSegueWithIdentifier:@"showMenuVC" sender:self];
+}
+
+#pragma mark - Notification methods
+
+- (void)addNotificationObservers
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateGuestsForCurrentInvitation) name:@"invitationUpdateDidFinish" object:nil];
+}
+
+- (void)removeNotificationObservers
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"invitationUpdateDidFinish" object:nil];
+}
+
+- (void)updateGuestsForCurrentInvitation
+{
+    [_tableView reloadData];
 }
 
 @end

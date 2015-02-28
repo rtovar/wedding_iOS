@@ -8,6 +8,9 @@
 
 #import "InfoVC.h"
 #import <MapKit/MapKit.h>
+#import <AddressBook/AddressBook.h>
+#import "InterfaceHelper.h"
+#import "ColorHelper.h"
 
 @interface InfoVC ()
 
@@ -20,35 +23,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self setTabBarItem:[self.tabBarItem initWithTitle:NSLocalizedString(@"tab_title_info", nil)
+                                                 image:[InterfaceHelper getImageWithName:@"icon_info" andTintColor:THEME_PURPLE]
+                                         selectedImage:[InterfaceHelper getImageWithName:@"icon_info_selected" andTintColor:THEME_PURPLE]]];
+    
     [self setLocation];
 }
 
 - (void)setLocation
 {
-    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
-
-    [geocoder geocodeAddressString:@"Carretera c-31, km. 191, El Prat de Llobregat"
-                 completionHandler:^(NSArray *placemarks, NSError *error){
-         for (CLPlacemark * aPlacemark in placemarks) {
-             // Set map point
-             MKPointAnnotation *point = [MKPointAnnotation new];
-             [point setCoordinate:[[aPlacemark location] coordinate]];
-             [point setTitle:[aPlacemark locality]];
-
-             // Set map region
-             MKCoordinateRegion region = _mapView.region;
-             region.center = aPlacemark.location.coordinate;
-             region.span.longitudeDelta = 1;
-             region.span.latitudeDelta = 1;
-
-             // Add point to the map
-             [_mapView setRegion:region animated:NO];
-             [_mapView addAnnotation:point];
-
-             // Select the PointAnnotation programatically
-             [_mapView selectAnnotation:point animated:YES];
-         }
-     }];
+    // Set map point
+    MKPointAnnotation *point = [MKPointAnnotation new];
+    [point setCoordinate:CLLocationCoordinate2DMake(41.3153128, 2.0659476)];
+    [point setTitle:@"El Jardí de les Palmeres"];
+    
+    // Set map region
+    MKCoordinateRegion region = _mapView.region;
+    region.center = point.coordinate;
+    region.span.longitudeDelta = 1;
+    region.span.latitudeDelta = 1;
+    
+    // Add point to the map
+    [_mapView setRegion:region animated:NO];
+    [_mapView addAnnotation:point];
+    
+    // Select the PointAnnotation programatically
+    [_mapView selectAnnotation:point animated:YES];
 }
 
 - (IBAction)mapButtonWasTapped:(id)sender
@@ -57,7 +58,7 @@
 
     if (annotations && annotations.count == 1) {
         MKPlacemark *mkDest = [[MKPlacemark alloc] initWithCoordinate:((id<MKAnnotation>)annotations[0]).coordinate
-                                                    addressDictionary:nil];
+                                                    addressDictionary:@{(NSString*)kABPersonAddressStreetKey:@"El Jardí de les Palmeres"}];
         [[[MKMapItem alloc] initWithPlacemark:mkDest] openInMapsWithLaunchOptions:nil];
     }
 }

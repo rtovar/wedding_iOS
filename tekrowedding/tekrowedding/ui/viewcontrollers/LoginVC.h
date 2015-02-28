@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ZBarSDK/ZBarReaderViewController.h>
 
-@interface LoginVC : UIViewController
+@interface LoginVC : UIViewController <ZBarReaderDelegate>
 
 @end

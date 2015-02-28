@@ -10,4 +10,12 @@
 
 @interface Invitation : NSObject
 
+@property (nonatomic, strong) NSString *identifier;
+@property (nonatomic, strong) NSArray *guests;
+@property (nonatomic, assign) BOOL sendInvitation;
+@property (nonatomic, strong) NSString *invitationLanguage;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
+- (NSDictionary *)dictionaryRepresentation;
+
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MWPhotoBrowser/MWPhotoBrowser.h>
 
-@interface InvitationVC : UIViewController
+@interface InvitationVC : UIViewController <UIAlertViewDelegate, MWPhotoBrowserDelegate>
 
 @end

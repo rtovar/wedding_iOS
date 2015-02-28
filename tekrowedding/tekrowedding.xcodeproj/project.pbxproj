@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C5EB9691A78EF47003CF266 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5EB9681A78EF47003CF266 /* main.m */; };
 		3C5EB96C1A78EF47003CF266 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5EB96B1A78EF47003CF266 /* AppDelegate.m */; };
-		3C5EB9771A78EF49003CF266 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5EB9761A78EF49003CF266 /* Images.xcassets */; };
 		3C5EB9861A78EF4A003CF266 /* tekroweddingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5EB9851A78EF4A003CF266 /* tekroweddingTests.m */; };
-		3C5EB9A41A790538003CF266 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5EB9731A78EF48003CF266 /* Main.storyboard */; };
 		3C5EB9A51A790538003CF266 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C5EB9781A78EF49003CF266 /* LaunchScreen.xib */; };
 		3C5EB9AA1A79245D003CF266 /* InfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5EB9A91A79245D003CF266 /* InfoVC.m */; };
 		3CAB1C931A7A3C9700170715 /* GuestsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB1C921A7A3C9700170715 /* GuestsVC.m */; };
@@ -24,6 +22,9 @@
 		3CC324DC1A851C4000F48E5B /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC324DB1A851C4000F48E5B /* NetworkHelper.m */; };
 		3CC324DF1A851F0600F48E5B /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC324DE1A851F0600F48E5B /* LoginVC.m */; };
 		3CD9FC921A7940A90061CAE9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD9FC8F1A7940930061CAE9 /* MapKit.framework */; };
+		E381B49F1A97E16800E21A5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E381B49E1A97E16800E21A5D /* Main.storyboard */; };
+		E381B4AA1A97E6F100E21A5D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E381B4A81A97E6F100E21A5D /* Localizable.strings */; };
+		E3EC14401AA1DBD9007701EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3EC143F1AA1DBD9007701EC /* Images.xcassets */; };
 		E7E02C7E1A7967CD003C0B41 /* InvitationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E02C7D1A7967CD003C0B41 /* InvitationVC.m */; };
 		E7E02C831A7969D3003C0B41 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E02C821A7969D3003C0B41 /* ColorHelper.m */; };
 		E7E02C891A79752C003C0B41 /* InvitationZoomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E02C881A79752C003C0B41 /* InvitationZoomVC.m */; };
@@ -47,9 +48,6 @@
 		3C5EB9681A78EF47003CF266 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C5EB96A1A78EF47003CF266 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C5EB96B1A78EF47003CF266 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3C5EB9741A78EF48003CF266 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3C5EB9761A78EF49003CF266 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3C5EB9791A78EF49003CF266 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3C5EB97F1A78EF4A003CF266 /* tekroweddingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tekroweddingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5EB9841A78EF4A003CF266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C5EB9851A78EF4A003CF266 /* tekroweddingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tekroweddingTests.m; sourceTree = "<group>"; };
@@ -76,6 +74,10 @@
 		3CD9FC8F1A7940930061CAE9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		84A890DF48339A0127E00328 /* libPods-tekrowedding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tekrowedding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4590B87E2C41AD755070363 /* Pods-tekrowedding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tekrowedding.release.xcconfig"; path = "Pods/Target Support Files/Pods-tekrowedding/Pods-tekrowedding.release.xcconfig"; sourceTree = "<group>"; };
+		E381B49E1A97E16800E21A5D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E381B4A91A97E6F100E21A5D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E381B4AB1A97E7AB00E21A5D /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E3EC143F1AA1DBD9007701EC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E7E02C7C1A7967CD003C0B41 /* InvitationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InvitationVC.h; path = ui/viewcontrollers/InvitationVC.h; sourceTree = "<group>"; };
 		E7E02C7D1A7967CD003C0B41 /* InvitationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InvitationVC.m; path = ui/viewcontrollers/InvitationVC.m; sourceTree = "<group>"; };
 		E7E02C811A7969D3003C0B41 /* ColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorHelper.h; path = helpers/ColorHelper.h; sourceTree = "<group>"; };
@@ -128,14 +130,14 @@
 		3C5EB9651A78EF46003CF266 /* tekrowedding */ = {
 			isa = PBXGroup;
 			children = (
+				E3EC143F1AA1DBD9007701EC /* Images.xcassets */,
 				3CC324D91A851C0C00F48E5B /* network */,
 				3CC324CF1A85156000F48E5B /* model */,
 				E7E02C7F1A796915003C0B41 /* helpers */,
 				3C5EB9A61A79241E003CF266 /* ui */,
 				3C5EB96A1A78EF47003CF266 /* AppDelegate.h */,
 				3C5EB96B1A78EF47003CF266 /* AppDelegate.m */,
-				3C5EB9731A78EF48003CF266 /* Main.storyboard */,
-				3C5EB9761A78EF49003CF266 /* Images.xcassets */,
+				E381B49E1A97E16800E21A5D /* Main.storyboard */,
 				3C5EB9781A78EF49003CF266 /* LaunchScreen.xib */,
 				3C5EB9661A78EF47003CF266 /* Supporting Files */,
 			);
@@ -145,6 +147,7 @@
 		3C5EB9661A78EF47003CF266 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E381B4A81A97E6F100E21A5D /* Localizable.strings */,
 				3C5EB9671A78EF47003CF266 /* Info.plist */,
 				3C5EB9681A78EF47003CF266 /* main.m */,
 			);
@@ -314,6 +317,7 @@
 				TargetAttributes = {
 					3C5EB9621A78EF46003CF266 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = C2UZU6ZLJE;
 					};
 					3C5EB97E1A78EF4A003CF266 = {
 						CreatedOnToolsVersion = 6.0;
@@ -327,7 +331,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				es,
 			);
 			mainGroup = 3C5EB95A1A78EF45003CF266;
 			productRefGroup = 3C5EB9641A78EF46003CF266 /* Products */;
@@ -345,9 +349,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C5EB9A41A790538003CF266 /* Main.storyboard in Resources */,
+				E381B49F1A97E16800E21A5D /* Main.storyboard in Resources */,
+				E3EC14401AA1DBD9007701EC /* Images.xcassets in Resources */,
+				E381B4AA1A97E6F100E21A5D /* Localizable.strings in Resources */,
 				3C5EB9A51A790538003CF266 /* LaunchScreen.xib in Resources */,
-				3C5EB9771A78EF49003CF266 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,20 +440,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3C5EB9731A78EF48003CF266 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3C5EB9741A78EF48003CF266 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3C5EB9781A78EF49003CF266 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3C5EB9791A78EF49003CF266 /* Base */,
+				E381B4AB1A97E7AB00E21A5D /* es */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		E381B4A81A97E6F100E21A5D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E381B4A91A97E6F100E21A5D /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -471,6 +476,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -491,6 +497,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "5105a231-0e86-4433-ac1a-1a3aca9d1935";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -512,6 +519,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -525,6 +533,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "5105a231-0e86-4433-ac1a-1a3aca9d1935";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -535,9 +544,12 @@
 			baseConfigurationReference = 0B69456541C9F891E95B3913 /* Pods-tekrowedding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tekrowedding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5105a231-0e86-4433-ac1a-1a3aca9d1935";
 			};
 			name = Debug;
 		};
@@ -546,9 +558,12 @@
 			baseConfigurationReference = B4590B87E2C41AD755070363 /* Pods-tekrowedding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tekrowedding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5105a231-0e86-4433-ac1a-1a3aca9d1935";
 			};
 			name = Release;
 		};

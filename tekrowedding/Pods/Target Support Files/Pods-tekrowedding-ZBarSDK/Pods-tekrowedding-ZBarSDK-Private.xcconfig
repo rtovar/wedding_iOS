@@ -1,0 +1,7 @@
+#include "Pods-tekrowedding-ZBarSDK.xcconfig"
+EXCLUDED_SOURCE_FILE_NAMES[sdk=iphoneos*][arch=*] = ${PODS_TEKROWEDDING_ZBARSDK_EXCLUDED_SOURCE_FILE_NAMES}
+EXCLUDED_SOURCE_FILE_NAMES[sdk=iphonesimulator*][arch=*] = ${PODS_TEKROWEDDING_ZBARSDK_EXCLUDED_SOURCE_FILE_NAMES}
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 ${PODS_TEKROWEDDING_ZBARSDK_GCC_PREPROCESSOR_DEFINITIONS}
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/ZBarSDK" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/DACircularProgress" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/MWPhotoBrowser" "${PODS_ROOT}/Headers/Public/PSTCollectionView" "${PODS_ROOT}/Headers/Public/SDWebImage" "${PODS_ROOT}/Headers/Public/ZBarSDK"
+OTHER_LDFLAGS = ${PODS_TEKROWEDDING_ZBARSDK_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}

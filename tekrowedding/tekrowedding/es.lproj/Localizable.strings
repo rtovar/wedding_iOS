@@ -1,0 +1,28 @@
+/* 
+  File.strings
+  tekrowedding
+
+  Created by Rocío Tovar on 20/2/15.
+  Copyright (c) 2015 Rocio Tovar. All rights reserved.
+*/
+"menu_meat" = "Plato de Carne";
+"menu_fish" = "Plato de Pescado";
+"menu_veggie" = "Plato Vegano";
+"menu_child" = "Menú Infantil";
+"menu_other" = "Otros (indícanos si tienes alguna preferencia diferente o alguna alergia a tener en cuenta)";
+"menu_unknown" = "Selecciona tu menú";
+"menu_other_placeholder" = "Otras preferencias";
+"tab_title_info" = "Información";
+"tab_title_guests" = "Invitados";
+"tab_title_invitation" = "Invitación";
+"alert.menu.message" = "Ups! No hemos podido guardar tus preferencias debido a un error, por favor, vuelve a intentarlo más tarde.";
+"alert.paperinvitation.message" = "Ups! No hemos podido guardar tus preferencias debido a un error, por favor, vuelve a intentarlo más tarde.";
+"ok" = "OK";
+"error_request_invitation_message" = "Vaya! No hemos podido descargar tu invitación del servidor, por favor, vuelve a intentarlo más tarde.";
+"print_invitation" = "Quiero recibir mi invitación en papel";
+"paper_invitation_sent" = "Descuida, te enviaremos la invitación en papel lo antes posible :)";
+"alert.paperinvitation.lang.title" = "Invitación en papel";
+"alert.paperinvitation.lang.message" = "¿En qué idioma quieres recibir la invitación?";
+"cancel" = "Cancelar";
+"alert.paperinvitation.es" = "Castellano";
+"alert.paperinvitation.cat" = "Català";
