@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MenuVC : UIViewController
+@interface MenuVC : UIViewController <UITextFieldDelegate>
 
 @end

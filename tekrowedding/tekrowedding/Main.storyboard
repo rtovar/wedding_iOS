@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LZV-sB-oK1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LZV-sB-oK1">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,11 +19,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3Z-lo-imc">
-                                <rect key="frame" x="16" y="364" width="288" height="67"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="222" verticalHuggingPriority="251" image="invitation" translatesAutoresizingMaskIntoConstraints="NO" id="BOq-T4-tgZ">
+                                <rect key="frame" x="0.0" y="88" width="320" height="285"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BOq-T4-tgZ" secondAttribute="height" multiplier="1:1" id="VmU-n9-FLK"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="VmU-n9-FLK"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUr-DW-lRg">
+                                <rect key="frame" x="0.0" y="88" width="320" height="285"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="geP-sP-fFf" kind="show" identifier="showInvitationDetail" id="ZiV-iH-9B0"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="A3Z-lo-imc">
+                                <rect key="frame" x="16" y="381" width="288" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLh-c9-fMz">
-                                        <rect key="frame" x="0.0" y="9" width="288" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLh-c9-fMz">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="G5l-S4-bNK"/>
                                         </constraints>
@@ -36,6 +58,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="XLh-c9-fMz" secondAttribute="trailing" id="37H-jr-V13"/>
                                     <constraint firstAttribute="centerY" secondItem="XLh-c9-fMz" secondAttribute="centerY" id="DKv-Wr-ymG"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZTc-4c-oQi"/>
                                     <constraint firstAttribute="centerY" secondItem="XLh-c9-fMz" secondAttribute="centerY" id="gqo-Gs-cfe"/>
                                     <constraint firstAttribute="trailing" secondItem="XLh-c9-fMz" secondAttribute="trailing" id="mEv-tB-Ua0"/>
                                     <constraint firstItem="XLh-c9-fMz" firstAttribute="leading" secondItem="A3Z-lo-imc" secondAttribute="leading" id="oaV-6f-EiN"/>
@@ -49,18 +72,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="222" verticalHuggingPriority="251" misplaced="YES" image="invitation.es" translatesAutoresizingMaskIntoConstraints="NO" id="BOq-T4-tgZ">
-                                <rect key="frame" x="0.0" y="44" width="320" height="320"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUr-DW-lRg">
-                                <rect key="frame" x="0.0" y="44" width="320" height="320"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="geP-sP-fFf" kind="show" identifier="showInvitationDetail" id="ZiV-iH-9B0"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.92156862745098034" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -70,7 +81,7 @@
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="A3Z-lo-imc" secondAttribute="bottom" id="7KQ-04-rlv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BOq-T4-tgZ" secondAttribute="trailing" constant="-16" id="Cy4-n2-EXM"/>
                             <constraint firstItem="BOq-T4-tgZ" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" priority="750" id="H4F-sA-XV3"/>
-                            <constraint firstItem="A3Z-lo-imc" firstAttribute="top" secondItem="BOq-T4-tgZ" secondAttribute="bottom" id="KeO-hs-d51"/>
+                            <constraint firstItem="A3Z-lo-imc" firstAttribute="top" secondItem="BOq-T4-tgZ" secondAttribute="bottom" constant="8" id="KeO-hs-d51"/>
                             <constraint firstItem="A3Z-lo-imc" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="L3S-zC-eGS"/>
                             <constraint firstItem="A3Z-lo-imc" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="VnT-O5-4NY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="A3Z-lo-imc" secondAttribute="trailing" id="WMX-F8-Nno"/>
@@ -84,6 +95,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="H4F-sA-XV3"/>
                                 <exclude reference="eUN-e8-vxG"/>
                                 <exclude reference="VnT-O5-4NY"/>
                                 <exclude reference="Y7F-ZK-uRg"/>
@@ -324,6 +336,9 @@
                                 <color key="textColor" red="0.36078432199999999" green="0.3058823645" blue="0.45098042490000001" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="H4s-R4-py6" id="KkH-eN-gRV"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vsX-IK-g0f">
                                 <rect key="frame" x="16" y="172" width="288" height="30"/>
@@ -855,6 +870,6 @@
         <image name="icon_info" width="31" height="31"/>
         <image name="icon_invitation" width="31" height="31"/>
         <image name="icon_location" width="29" height="45"/>
-        <image name="invitation.es" width="320" height="320"/>
+        <image name="invitation" width="320" height="320"/>
     </resources>
 </document>

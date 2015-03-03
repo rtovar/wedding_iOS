@@ -26,9 +26,10 @@
 
 #pragma mark - Life cycle
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
+
     [self.view setBackgroundColor:THEME_COLOR];
     [self setupPaperInvitationButton];
     [self addNotificationObservers];
@@ -37,14 +38,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
     if (!_didSetUpTabBar) {
         [self.navigationController setTabBarItem:[self.tabBarItem initWithTitle:NSLocalizedString(@"tab_title_invitation", nil)
                                                                           image:[[InterfaceHelper getImageWithName:@"icon_invitation" andTintColor:THEME_PURPLE] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                                                   selectedImage:[[InterfaceHelper getImageWithName:@"icon_invitation_selected" andTintColor:THEME_PURPLE] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]]];
         _didSetUpTabBar = YES;
     }
-    
+
     [self.navigationController setNavigationBarHidden:YES];
 }
 
@@ -57,6 +58,8 @@
 
 - (void)setupPaperInvitationButton
 {
+    [_printInvitationBtn.titleLabel setNumberOfLines:0];
+    [_printInvitationBtn.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [_printInvitationBtn setTitleColor:THEME_PURPLE forState:UIControlStateSelected];
     [_printInvitationBtn setTitleColor:THEME_COLOR forState:UIControlStateNormal];
     [_printInvitationBtn setTitleColor:THEME_PINK forState:UIControlStateHighlighted];
@@ -69,9 +72,11 @@
 {
     if ([[ContentProvider sharedInstance] getCurrentInvitation].sendInvitation) {
         [_printInvitationBtn setSelected:YES];
+        [_printInvitationBtn setUserInteractionEnabled:NO];
         [_printInvitationBtn setBackgroundColor:[UIColor clearColor]];
         [_printInvitationBtn.titleLabel setFont:[UIFont systemFontOfSize:12.f]];
     } else {
+        [_printInvitationBtn setUserInteractionEnabled:YES];
         [_printInvitationBtn setBackgroundColor:THEME_PURPLE];
         [_printInvitationBtn setTintColor:THEME_COLOR];
         [_printInvitationBtn.layer setCornerRadius:3.f];
@@ -116,7 +121,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"showInvitationDetail"]) {
-        MWPhotoBrowser *photoBrowserVC = (MWPhotoBrowser *) segue.destinationViewController;
+        MWPhotoBrowser *photoBrowserVC = (MWPhotoBrowser *)segue.destinationViewController;
         [photoBrowserVC setDelegate:self];
         [photoBrowserVC setEnableGrid:NO];
         [photoBrowserVC setStartOnGrid:NO];
@@ -132,7 +137,7 @@
 
 - (id<MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index
 {
-    return [MWPhoto photoWithImage:[UIImage imageNamed:@"invitation.es"]];
+    return [MWPhoto photoWithImage:[UIImage imageNamed:@"invitation"]];
 }
 
 @end

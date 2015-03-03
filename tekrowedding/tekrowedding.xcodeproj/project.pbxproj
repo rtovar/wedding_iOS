@@ -269,9 +269,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3C5EB9621A78EF46003CF266 /* tekrowedding */ = {
+		3C5EB9621A78EF46003CF266 /* TekroWedding */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C5EB9891A78EF4B003CF266 /* Build configuration list for PBXNativeTarget "tekrowedding" */;
+			buildConfigurationList = 3C5EB9891A78EF4B003CF266 /* Build configuration list for PBXNativeTarget "TekroWedding" */;
 			buildPhases = (
 				649DC8363289E24E285F91BE /* Check Pods Manifest.lock */,
 				3C5EB95F1A78EF46003CF266 /* Sources */,
@@ -283,7 +283,7 @@
 			);
 			dependencies = (
 			);
-			name = tekrowedding;
+			name = TekroWedding;
 			productName = tekrowedding;
 			productReference = 3C5EB9631A78EF46003CF266 /* tekrowedding.app */;
 			productType = "com.apple.product-type.application";
@@ -338,7 +338,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3C5EB9621A78EF46003CF266 /* tekrowedding */,
+				3C5EB9621A78EF46003CF266 /* TekroWedding */,
 				3C5EB97E1A78EF4A003CF266 /* tekroweddingTests */,
 			);
 		};
@@ -434,7 +434,7 @@
 /* Begin PBXTargetDependency section */
 		3C5EB9811A78EF4A003CF266 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3C5EB9621A78EF46003CF266 /* tekrowedding */;
+			target = 3C5EB9621A78EF46003CF266 /* TekroWedding */;
 			targetProxy = 3C5EB9801A78EF4A003CF266 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -494,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "5105a231-0e86-4433-ac1a-1a3aca9d1935";
@@ -531,7 +531,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "5105a231-0e86-4433-ac1a-1a3aca9d1935";
 				SDKROOT = iphoneos;
@@ -544,6 +544,7 @@
 			baseConfigurationReference = 0B69456541C9F891E95B3913 /* Pods-tekrowedding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tekrowedding/Info.plist;
@@ -558,6 +559,7 @@
 			baseConfigurationReference = B4590B87E2C41AD755070363 /* Pods-tekrowedding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tekrowedding/Info.plist;
@@ -613,7 +615,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C5EB9891A78EF4B003CF266 /* Build configuration list for PBXNativeTarget "tekrowedding" */ = {
+		3C5EB9891A78EF4B003CF266 /* Build configuration list for PBXNativeTarget "TekroWedding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C5EB98A1A78EF4B003CF266 /* Debug */,

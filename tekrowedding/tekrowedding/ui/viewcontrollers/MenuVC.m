@@ -11,7 +11,7 @@
 #import "ContentProvider.h"
 #import "ColorHelper.h"
 
-@interface MenuVC()
+@interface MenuVC ()
 {
     Guest *_guest;
 }
@@ -34,6 +34,7 @@
 {
     [super viewDidLoad];
     [self setupGuest];
+    [self addNotificationsObservers];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -46,6 +47,11 @@
     [self saveData];
 }
 
+- (void)dealloc
+{
+
+}
+
 #pragma mark - User Interface
 
 - (void)setupGuest
@@ -53,15 +59,15 @@
     _guest = [ContentProvider sharedInstance].currentGuest;
     NSString *menuString;
     NSString *menuKey = @"menu_";
-    
+
     if (_guest.menu) {
         menuKey = [NSString stringWithFormat:@"%@%@", menuKey, _guest.menu];
         menuString = NSLocalizedString(menuKey, @"");
     }
-    
+
     [self selectButtonsWithMenu:menuString];
     [self setupOtherTextField];
-    
+
 }
 
 - (void)setupButtons
@@ -94,7 +100,7 @@
         [_otherTextField setEnabled:YES];
         [_otherTextField setText:_guest.menuOther];
     } else {
-        [_otherTextField setSelected:NO];
+        [_otherTextField setEnabled:NO];
     }
 }
 
@@ -105,7 +111,7 @@
     if ([_otherButton isSelected]) {
         [_guest setMenuOther:_otherTextField.text];
     }
-    
+
     [[ContentProvider sharedInstance] updateGuest:_guest];
 }
 
@@ -148,6 +154,52 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     [self saveData];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+
+    return YES;
+}
+
+#pragma mark - Notifications
+
+- (void)addNotificationsObservers
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)removeNotificationsObservers
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    if ([UIScreen mainScreen].bounds.size.height <= 568.0) {
+        [UIView animateWithDuration:0.3 animations:^{
+             [self.view setFrame:CGRectMake(self.view.frame.origin.x,
+                                            -(_otherTextField.frame.origin.y + _otherTextField.frame.size.height) + 104,
+                                            self.view.frame.size.width,
+                                            self.view.frame.size.height)];
+         }];
+    }
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    if ([UIScreen mainScreen].bounds.size.height <= 568.0) {
+        [UIView animateWithDuration:0.3 animations:^{
+             [self.view setFrame:CGRectMake(self.view.frame.origin.x,
+                                            0,
+                                            self.view.frame.size.width,
+                                            self.view.frame.size.height)];
+         }];
+    }
 }
 
 @end
