@@ -92,8 +92,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[ContentProvider sharedInstance] setCurrentGuest:_guestsArray[indexPath.row]];
-    [self performSegueWithIdentifier:@"showMenuVC" sender:self];
+    Guest *guest = _guestsArray[indexPath.row];
+    if (guest.rsvp) {
+        [[ContentProvider sharedInstance] setCurrentGuest:guest];
+        [self performSegueWithIdentifier:@"showMenuVC" sender:self];
+    }
 }
 
 #pragma mark - Notification methods
